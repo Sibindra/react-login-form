@@ -19,7 +19,13 @@ export default function LoginContainer() {
 
     function handleSubmit(event){
         event.preventDefault();
-        console.log(user);
+
+        if(user.email==="test@test.com" && user.password==="1234"){
+            console.log("match")
+        }else{
+            console.log("no match")
+        }
+        // console.log(user);
     }
 
     return (
