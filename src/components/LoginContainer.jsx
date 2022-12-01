@@ -16,6 +16,12 @@ export default function LoginContainer() {
         });
     }
 
+
+    function handleSubmit(event){
+        event.preventDefault();
+        console.log(user);
+    }
+
     return (
         <Card
             style={{
@@ -23,7 +29,7 @@ export default function LoginContainer() {
                 height: "40vh",
             }}
         >
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
