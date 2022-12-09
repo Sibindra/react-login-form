@@ -1,12 +1,11 @@
-import LoginContainer from "./components/LoginContainer";
+import Login from "./components/Login";
 
 function App() {
-  return (
-    // boostrap class names
-    <div id="hero" className="d-flex align-items-center justify-content-center min-w-100 min-vh-100" style={{border:"1px solid red"}}>
-        <LoginContainer/>
-    </div>
-  );
+    return (
+        <div id="Hero" className="vh-100 d-flex flex-column align-items-center justify-content-center">
+            <Login />
+        </div>
+    );
 }
 
 export default App;
