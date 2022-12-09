@@ -1,7 +1,10 @@
-import React from "react";
+import React,{useRef} from "react";
 import { Card, Form, Button } from "react-bootstrap";
 
 export default function Login() {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
     return (
         <>
             <Card>
@@ -11,7 +14,7 @@ export default function Login() {
                     <Form>
                         <Form.Group id="email">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" required></Form.Control>
+                            <Form.Control type="email" required ref={emailRef}></Form.Control>
                         </Form.Group>
 
                         <Form.Group id="password">
@@ -19,15 +22,16 @@ export default function Login() {
                             <Form.Control
                                 type="password"
                                 required
+                                ref={passwordRef}
                             ></Form.Control>
                         </Form.Group>
 
-                        <Button type="submit" className="w-100 mt-3">Log In</Button>
+                        <Button type="submit" className="w-100 mt-3">
+                            Log In
+                        </Button>
                     </Form>
 
-                    <div className="text-center mt-3">
-                        Forgot Password?
-                    </div>
+                    <div className="text-center mt-3">Forgot Password?</div>
                 </Card.Body>
             </Card>
 
