@@ -10,7 +10,7 @@ export default function Signup() {
     return (
 
         <>
-            <Card>
+            <Card className="w-25">
                 <Card.Body className="p-3">
                     <h2 className="text-center">Sign Up</h2>
 
